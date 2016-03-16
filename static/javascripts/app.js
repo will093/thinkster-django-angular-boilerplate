@@ -1,7 +1,7 @@
 angular
     .module('thinkster', [
         'thinkster.authentication',
-        'ngRoute'
+        'ui.router'
     ]);
 
 angular

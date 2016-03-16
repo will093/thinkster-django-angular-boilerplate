@@ -1,20 +1,18 @@
-(function () {
-  'use strict';
-
-  angular
+angular
     .module('thinkster')
-    .config(config);
-
-  config.$inject = ['$routeProvider'];
-
-  /**
-  * @name config
-  * @desc Define valid application routes
-  */
-  function config($routeProvider) {
-    $routeProvider.when('/register', {
-      controller: 'RegisterController',
-      templateUrl: '/static/templates/authentication/register.html'
-    }).otherwise('/');
-  }
-})();
+    .config(function($stateProvider, $urlRouterProvider) {
+        //
+        // For any unmatched url, redirect to /state1
+        $urlRouterProvider.otherwise("/register");
+        //
+        // Now set up the states
+        $stateProvider
+            .state('register', {
+                url: "/register",
+                controller: 'RegisterController',
+                templateUrl: '/static/templates/authentication/register.html'
+            })
+            .state('login', {
+                url: "/login",
+            });
+    });
