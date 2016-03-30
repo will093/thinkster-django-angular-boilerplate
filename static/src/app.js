@@ -1,6 +1,8 @@
 angular
     .module('thinkster', [
         'thinkster.authentication',
+        'thinkster.messageBoard',
+        'thinkster.common',
         'ui.router'
     ]);
 

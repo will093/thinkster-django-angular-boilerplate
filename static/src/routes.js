@@ -13,20 +13,21 @@ angular
                 abstract: true,
                 url: '',
                 controller: 'MainController',
-                templateUrl:'/static/templates/main.html'
-
+                templateUrl:'/static/src/main.html'
             })
             .state('app.register', {
                 url: '/register',
                 controller: 'RegisterController',
-                templateUrl: '/static/templates/authentication/register.html'
+                templateUrl: '/static/src/authentication/controllers/register.html'
             })
             .state('app.login', {
                 url: '/login',
                 controller: 'LoginController',
-                templateUrl: '/static/templates/authentication/login.html'
+                templateUrl: '/static/src/authentication/controllers/login.html'
             })
             .state('app.home', {
                 url: '/home',
+                controller: 'MessageBoardController',
+                templateUrl: '/static/src/message-board/controllers/message-board.html'
             });
     });

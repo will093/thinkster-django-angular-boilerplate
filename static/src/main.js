@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('thinkster.authentication')
+    .module('thinkster')
     .controller('MainController', function($scope, Authentication) {
 
         $scope.authentication = Authentication;
