@@ -3,7 +3,9 @@ angular
         'thinkster.authentication',
         'thinkster.messageBoard',
         'thinkster.common',
-        'ui.router'
+        'ui.router',
+        'ui.bootstrap',
+        'ngMessages'
     ]);
 
 angular

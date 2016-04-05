@@ -40,23 +40,19 @@ angular
         }
 
         function getAuthenticatedAccount() {
-            if (!$cookies.authenticatedAccount) {
-                return;
-            }
-
-            return JSON.parse($cookies.authenticatedAccount);
+            return $cookies.getObject('authenticatedAccount');
         }
 
         function setAuthenticatedAccount(account) {
-            $cookies.authenticatedAccount = JSON.stringify(account);
+            $cookies.putObject('authenticatedAccount', account);
         }
 
         function isAuthenticated() {
-            return !!$cookies.authenticatedAccount;
+            return !!getAuthenticatedAccount();
         }
 
         function unauthenticate() {
-            delete $cookies.authenticatedAccount;
+            $cookies.remove('authenticatedAccount');
         }
 
         var Authentication = {
